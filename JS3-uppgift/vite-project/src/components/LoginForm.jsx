@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FormInput from './FormInput'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -11,6 +11,9 @@ const LoginForm = () => {
   
   const [errors, setErrors] = useState({})
   const { user } = useSelector(state => state.auth)
+
+  const [submitted, setSubmitted] = useState(false)
+
     const navigate = useNavigate();
     const dispatch = useDispatch()
 
@@ -30,18 +33,24 @@ const LoginForm = () => {
     }
 
   
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
       e.preventDefault()
 
-      // if(!validateLogin(formData, setErrors)){
-      //   return
-      // }
-      
-      dispatch(loginUser(formData))
-      if(user != null){
-        navigate("/user")
+      if(!validateLogin(formData, setErrors)){
+        return
       }
+      
+      await dispatch(loginUser(formData))
+      setSubmitted(true)
+
     }
+    
+    useEffect(() => {
+      if(user !== null){
+        navigate("/user")
+      } 
+      
+    }, [ submitted, user])
   
   
     return (

@@ -945,6 +945,17 @@ margin-bottom: 15px;
     margin-bottom: 2rem;
 }
 
+.UserProfile p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.UserProfile .link {
+    color: var(--clr-red);
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .UserProfile .current-order {
     margin-bottom: 3rem;
 }
@@ -1017,3 +1028,47 @@ margin-bottom: 15px;
     align-items: center;
     padding-bottom: 3rem;
   }
+
+  /* ORDER */
+
+  .orderRowImg{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .row-wrapper{
+    display: inline-block;
+    width: 160px;
+  }
+
+  .order-wrapper{
+    border: 1px solid grey;
+    padding: 1rem;
+    margin-top: 1rem;
+    /* display: flex; */
+  }
+
+  .ordernumber{
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+    display: block;
+  }
+
+  .curOrders{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .prevOrders{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 5rem;
+  }
+
+  .allOrders{
+    padding-bottom: 3rem;
+  }
+

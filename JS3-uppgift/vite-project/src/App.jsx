@@ -9,6 +9,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Checkout from './pages/Checkout'
 import UserProfile from './pages/UserProfile'
+import OrderList from './pages/OrderList'
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/products" element= { <Products />}/>
             <Route path="/products/:id" element= { <ProductDetails/>}/>
             <Route path="/contact" element= { <Contact/>}/>
+            <Route path= "/orders" element ={<OrderList/>}/>
             <Route path="/login" element= { <Login/>}/>
             <Route path="/registration" element= { <Registration/>}/>
             <Route path='/checkout' element={<Checkout />} />
