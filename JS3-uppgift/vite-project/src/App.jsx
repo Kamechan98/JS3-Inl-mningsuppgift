@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Checkout from './pages/Checkout'
 import UserProfile from './pages/UserProfile'
 import OrderList from './pages/OrderList'
+import AddProduct from './pages/AddProduct'
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
             <Route path="/" element= { <Home/>}/>
             <Route path="/products" element= { <Products />}/>
+            <Route path="/add-product" element= { <AddProduct/>}/>
             <Route path="/products/:id" element= { <ProductDetails/>}/>
             <Route path="/contact" element= { <Contact/>}/>
             <Route path= "/orders" element ={<OrderList/>}/>
