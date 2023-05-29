@@ -68,6 +68,9 @@ exports.login = async (req, res) => {
   if(!result) return res.status(401).json({ message: 'Incorrect credentials' })
 
   // Generating token
-  res.status(200).json(generateToken(user))
+  // res.status(200).json(generateToken(user))
+
+  // Returning user object
+  res.status(200).json(user)
 }
 
