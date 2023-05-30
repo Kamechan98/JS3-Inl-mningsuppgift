@@ -1107,15 +1107,21 @@ margin-bottom: 15px;
 
   .edit,
   .delete {
-    padding-top: 1rem;
-    padding: .5rem;
-    margin-left: 5em;
-    font-size: .5rem;
+    margin-top: 1rem;
+    padding: .4rem;
+    margin-left: 2em;
+    font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
     border: none;
     background-color: #e0183a;
     color: #DDDDDD;
-    display: flex;
+  }
+
+  .validation-error {
+    font-size: 1.2rem;
+    color: firebrick;
+    font-weight: bolder;
+    margin: 1rem;
   }

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../components/ShoppingCart/CartItem'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { clearCart } from '../store/features/shoppingCart/shoppingCartSlice'
 import { logOut } from '../store/features/auth/authSlice'
 
@@ -9,6 +9,7 @@ const UserProfile = () => {
 
   const { cart, totalAmount } = useSelector(state => state.shoppingCart)
   const { user } = useSelector(state => state.auth)
+  if(!user) return <Navigate to='/login'/>
   const dispatch = useDispatch()
   const navigate = useNavigate()
 

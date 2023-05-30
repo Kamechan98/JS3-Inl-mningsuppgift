@@ -11,6 +11,8 @@ import Checkout from './pages/Checkout'
 import UserProfile from './pages/UserProfile'
 import OrderList from './pages/OrderList'
 import AddProduct from './pages/AddProduct'
+import DeleteProduct from './pages/DeleteProduct'
+import Edit from './pages/Edit'
 
 const App = () => {
 
@@ -21,7 +23,9 @@ const App = () => {
             <Route path="/" element= { <Home/>}/>
             <Route path="/products" element= { <Products />}/>
             <Route path="/add-product" element= { <AddProduct/>}/>
+            <Route path="/edit-product/:id" element= { <Edit/>}/>
             <Route path="/products/:id" element= { <ProductDetails/>}/>
+            <Route path="/delete-product/:id" element= { <DeleteProduct/>}/>
             <Route path="/contact" element= { <Contact/>}/>
             <Route path= "/orders" element ={<OrderList/>}/>
             <Route path="/login" element= { <Login/>}/>

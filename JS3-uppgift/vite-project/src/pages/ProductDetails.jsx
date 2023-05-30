@@ -3,7 +3,7 @@ import heroBanner from '../assets/Placeholders/1920x300.svg'
 import { FaStar } from 'react-icons/fa'
 import { MdOutlineAddShoppingCart } from "react-icons/md"
 import useFetch from '../components/useFetch'
-import { useParams } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 import { useDispatch } from 'react-redux'
 import { addToCart, removeOne } from '../store/features/shoppingCart/shoppingCartSlice'
@@ -14,6 +14,10 @@ import { useSelector } from 'react-redux'
 const ProductDetails = () => {
 
   const { id } = useParams()
+  const navigate = useNavigate()
+
+  const {user} = useSelector(state => state.auth)
+  if(!user) return <Navigate to='/login'/>
   
 
   const { data: product } = useFetch('http://localhost:9999/api/products/' + id)
@@ -54,6 +58,10 @@ const ProductDetails = () => {
     return <div>Loading...</div>;
   }
 
+
+
+  
+
   return (
     <div className='product-details'>
 
@@ -92,8 +100,8 @@ const ProductDetails = () => {
             
           </form>
           <div>
-              <button className='delete'>X</button>
-              <button className='edit'>Edit</button>
+              <Link className='delete' to={'/delete-product/' + id} >X</Link>
+              <Link className='edit' to={'/edit-product/' + id} >EDIT</Link>
           </div>
 
 

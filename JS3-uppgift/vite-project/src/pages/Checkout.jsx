@@ -13,6 +13,7 @@ const Checkout = () => {
 
   const { cart, totalAmount } = useSelector(state => state.shoppingCart)
   const { user } = useSelector(state => state.auth)
+  if(!user) return <Navigate to='/login'/>
 
   // const placeOrder = () => {
   //   const order = cart.map(item => {

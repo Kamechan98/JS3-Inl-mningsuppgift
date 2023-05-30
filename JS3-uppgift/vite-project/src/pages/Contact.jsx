@@ -2,9 +2,13 @@ import React from 'react'
 import heroBanner from '../assets/Placeholders/1920x300.svg'
 import FormInput from '../components/FormInput'
 import Map from '../components/Map'
+import { useSelector } from 'react-redux'
+import { Navigate } from 'react-router-dom'
 
 
 const Contact = () => {
+  const {user} = useSelector(state => state.auth)
+  if(!user) return <Navigate to='/login'/>
   return (
     <div className='ContactContainer'>
     <img src={heroBanner} />

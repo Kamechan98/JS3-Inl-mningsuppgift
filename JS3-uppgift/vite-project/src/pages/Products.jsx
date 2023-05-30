@@ -1,7 +1,11 @@
+import { Navigate } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 import useFetch from '../components/useFetch'
+import { useSelector } from 'react-redux'
 
 const Products = () => {
+  const {user} = useSelector(state => state.auth)
+  if(!user) return <Navigate to='/login'/>
 
   const { data: products, isLoading, error } = useFetch('http://localhost:9999/api/products')
 

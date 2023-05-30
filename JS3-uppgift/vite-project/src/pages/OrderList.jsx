@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllOrders } from '../store/features/orders/orderSlice';
 import CartItem from '../components/ShoppingCart/CartItem'
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const OrderList = () => {
@@ -13,6 +13,7 @@ const OrderList = () => {
     const { orders } = useSelector(state => state.orders);
     const { cart, totalAmount } = useSelector(state => state.shoppingCart)
     const { user } = useSelector(state => state.auth)
+    if(!user) return <Navigate to='/login'/>
 
     // fetching all orders made by this user
     useEffect(() => {

@@ -1,5 +1,5 @@
 export const validateProduct = ( formData, setErrors ) => {
-
+console.log(formData)
     const err = {}
 
     // product name
@@ -30,12 +30,12 @@ export const validateProduct = ( formData, setErrors ) => {
     err.imageURL = 'Your image URL is invalid'
   }
 
-  // tags
-  if(formData.tags.trim() === '') {
-    err.tags = 'You need to enter a city'
-  } else if(formData.tags.length < 3) {
-    err.tags = 'Your city must be atleast 3 chars long'
-  }
+  // // tags
+  // if(formData.tags.trim() === '') {
+  //   err.tags = 'You need to enter a city'
+  // } else if(formData.tags.length < 3) {
+  //   err.tags = 'Your city must be atleast 3 chars long'
+  // }
 
     console.log(err)
     setErrors(err)

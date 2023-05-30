@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import FormInput from './FormInput'
 import { validateProduct } from '../helpers/validateProduct'
 import { useSelector } from 'react-redux'
@@ -10,6 +10,7 @@ const AddProduct = () => {
   const [validationError, setValidationError] = useState(null)
   const navigate = useNavigate();
   const {user} = useSelector(state => state.auth)
+  if(!user) return <Navigate to='/login'/>
 
   const handleChange = e => {
     const { id, value } = e.target
@@ -37,7 +38,7 @@ const AddProduct = () => {
     
     if(res.status === 201) navigate('/products')
 
-    if(res.status === 401)setValidationError('måste vara admin')  
+    if(res.status === 401)setValidationError('You need to be ADMIN in order to post')  
   }
 
   const [formData, setformData] = useState({
@@ -45,14 +46,13 @@ const AddProduct = () => {
     description: '',
     price: '',
     imageURL: '',
-    tags: '',
+    // tags: '',
     rating: '',
     review: ''
   })
 
   return (
     <form noValidate onSubmit={handleSubmit} className='add-form'>
-      {validationError && <p> {validationError} </p>}
     <FormInput
     id="name"
     type="text"
@@ -85,14 +85,14 @@ const AddProduct = () => {
     onChange={handleChange}
     errorMsg={errors.imageURL}
     />
-    <FormInput
+    {/* <FormInput
     id="tags"
     type="text"
     label="Add tags*"
     value={formData.tags}
     onChange={handleChange}
     errorMsg={errors.tags}
-    />
+    /> */}
     <FormInput
     id="rating"
     type="text"
@@ -107,6 +107,7 @@ const AddProduct = () => {
     value={formData.review}
     onChange={handleChange}
     />
+    {validationError && <p className='validation-error'> {validationError} </p>}
     <button className='login-btn'>Submit</button>
     </form>
   )
