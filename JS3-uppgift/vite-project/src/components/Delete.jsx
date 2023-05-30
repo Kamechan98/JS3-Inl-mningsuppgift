@@ -29,13 +29,16 @@ const Delete = () => {
       }
 
   return (
-    <div className='product-delete'>
-        <div className='d-wrapper'>
-            <h1>delete</h1>
-            <p>Är du säker?</p>
+    <div className='p-delete'>
+       
+        <div className='d-card'>
+          <h2 className='d-headline'>Are you sure you wanna delete this product?</h2>
+            <p className='d-underline'>This action cannot be reversed</p>
             { validationError&&<p>{validationError}</p>}
+            <div className='confirm'>
             <button onClick={Delete}>Yes</button>
-            <button>No</button>
+            <button onClick={ () => navigate('/products/')}>No</button>
+            </div>
         </div>
   </div>
   )

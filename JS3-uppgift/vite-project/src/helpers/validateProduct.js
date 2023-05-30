@@ -1,5 +1,4 @@
 export const validateProduct = ( formData, setErrors ) => {
-console.log(formData)
     const err = {}
 
     // product name

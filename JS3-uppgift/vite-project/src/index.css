@@ -431,7 +431,7 @@ margin-top: 30px;
 .Products .productsTitle{
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 /* ------- Add Product------------- */
@@ -461,6 +461,24 @@ margin-top: 30px;
 
 .add-headline {
     padding-bottom: 2em;
+}
+
+.add-wrap {
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+.add-btn {
+    padding: 1rem 2rem;
+    margin-left: 2em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: #e0183a;
+    color: #DDDDDD;
 }
 
 #description {
@@ -913,10 +931,10 @@ margin-top: 30px;
 #firstName,
 #lastName,
 #company,
-#postalcode,
+#postalCode,
 #city,
 #mobile{
-    width: 20em;
+    width: 22.5em;
     margin-right: 2.2em
 }
 
@@ -947,8 +965,8 @@ margin-bottom: 15px;
 
 #email,
 #password,
-#confirm-pswrd,
-#profile-img,
+#confirmPswrd,
+#profileImg,
 #street{
     width: 47em;
     /* padding: 0.8em 15rem; */
@@ -1105,6 +1123,9 @@ margin-bottom: 15px;
     padding-bottom: 3rem;
   }
 
+  .btns{
+    margin: 20px
+  }
   .edit,
   .delete {
     margin-top: 1rem;
@@ -1124,4 +1145,50 @@ margin-bottom: 15px;
     color: firebrick;
     font-weight: bolder;
     margin: 1rem;
+  }
+
+  .p-delete{
+    display: grid;
+    place-items: center;
+    align-items: end;
+}
+.d-card {
+    /* height: 100%; */
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+    background-color: #f8f8f8;
+    border: 1px solid #b4b4b4;
+    border-radius: .6rem;
+    width: 800px;
+    border-radius: 1rem;
+    width: 1000px;
+    padding: 2.5rem;
+  }
+  .d-headline {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .d-underline {
+    text-align: center;
+    font-size: 1.3rem;
+    padding-top: .5rem;
+  }
+
+  .confirm {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .confirm button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    margin-left: 2em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: #e0183a;
+    color: #DDDDDD;
   }

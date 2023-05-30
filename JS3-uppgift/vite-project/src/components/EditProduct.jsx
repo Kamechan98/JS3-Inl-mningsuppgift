@@ -9,6 +9,7 @@ const EditProduct = ({product, id}) => {
     const [errors, setErrors] = useState({})
     const [validationError, setValidationError] = useState(null)
     const navigate = useNavigate();
+    const {user} = useSelector(state => state.auth)
 
     const handleChange = e => {
         const { id, value } = e.target

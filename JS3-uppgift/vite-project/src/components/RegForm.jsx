@@ -140,8 +140,10 @@ const RegForm = () => {
     label="Upload Profile Image (optional)"
     value={formData.profileImg}
     onChange={handleChange}/>
+    <div>
     <input type="checkbox" id='reg-checkbox'/> 
     <label className='checkbox-label' htmlFor="checkbox">i have read and accept terms and agreements</label>
+    </div>
     <button className='login-btn'>Submit</button>
     {/* <p>{JSON.stringify(formData, '', 1)}</p> */}
     </form>

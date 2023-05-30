@@ -1,9 +1,10 @@
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard'
 import useFetch from '../components/useFetch'
 import { useSelector } from 'react-redux'
 
 const Products = () => {
+  const navigate = useNavigate();
   const {user} = useSelector(state => state.auth)
   if(!user) return <Navigate to='/login'/>
 
@@ -12,6 +13,9 @@ const Products = () => {
   return (
     <div className='Products'>
       <h1 className="productsTitle">Products</h1>
+      <div className='add-wrap'>
+      <button className='add-btn' onClick={ () => navigate('/add-product/')}>add</button>
+      </div>
       {/* Possible menu with filters, the tags we gave the products? */}
       <ul className='ProductCards-container'>
         {isLoading && <p>Loading...</p>}

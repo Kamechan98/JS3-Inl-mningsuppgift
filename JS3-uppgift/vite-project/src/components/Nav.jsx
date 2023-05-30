@@ -38,7 +38,7 @@ const Nav = () => {
         <ul className="nav-links">
           <li><NavLink to='/' className='nav-link'>Home</NavLink></li>
           <li><NavLink to='/products' className='nav-link'>Products</NavLink></li>
-          <li><NavLink to='/add-product' className='nav-link'>Add Products</NavLink></li>
+          {/* <li><NavLink to='/add-product' className='nav-link'>Add Products</NavLink></li> */}
           <li><NavLink to='/contact' className='nav-link'>Contact</NavLink></li>
           <li><NavLink to='/' className='nav-link nav-link-grey'><FaSearch /></NavLink></li>
           { user

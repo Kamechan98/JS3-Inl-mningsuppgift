@@ -26,11 +26,11 @@ const AddProduct = () => {
     e.preventDefault()
     if(!validateProduct(formData, setErrors)) return
 
-    const res = await fetch ('http://localhost:9999/api/products', {
+    const res = await fetch ('http://localhost:9999/api/products/', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        authorization: 'Bearer ' + user //Lägg till token
+        authorization: 'Bearer ' + user 
       },
       body: JSON.stringify(formData)
     })
@@ -108,7 +108,7 @@ const AddProduct = () => {
     onChange={handleChange}
     />
     {validationError && <p className='validation-error'> {validationError} </p>}
-    <button className='login-btn'>Submit</button>
+    <button className='login-btn'>ADD</button>
     </form>
   )
 }

@@ -99,7 +99,7 @@ const ProductDetails = () => {
             <button type='submit' className='addTo-cart-btn' onClick={addProductToCart}>Add to Cart<MdOutlineAddShoppingCart className='shopping-cart-icon' /></button>
             
           </form>
-          <div>
+          <div className='btns'>
               <Link className='delete' to={'/delete-product/' + id} >X</Link>
               <Link className='edit' to={'/edit-product/' + id} >EDIT</Link>
           </div>
