@@ -1105,3 +1105,17 @@ margin-bottom: 15px;
     padding-bottom: 3rem;
   }
 
+  .edit,
+  .delete {
+    padding-top: 1rem;
+    padding: .5rem;
+    margin-left: 5em;
+    font-size: .5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: #e0183a;
+    color: #DDDDDD;
+    display: flex;
+  }

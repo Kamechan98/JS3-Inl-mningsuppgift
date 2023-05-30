@@ -89,8 +89,12 @@ const ProductDetails = () => {
               <input type="button" value="+" className='plus'  onClick={() => setQuantity(quantity + 1)} />
             </div>
             <button type='submit' className='addTo-cart-btn' onClick={addProductToCart}>Add to Cart<MdOutlineAddShoppingCart className='shopping-cart-icon' /></button>
+            
           </form>
-
+          <div>
+              <button className='delete'>X</button>
+              <button className='edit'>Edit</button>
+          </div>
 
 
 

@@ -1,20 +1,20 @@
 const router = require('express').Router();
 const { addProduct, getProducts, getProductById, updateProduct, deleteProduct } = require('../models/productModel');
-const { verifyToken } = require('../authentication/auth')
+const { verifyToken, checkAdmin } = require('../authentication/auth')
 
 
 
 // Create
-router.post('/', verifyToken, addProduct);
+router.post('/', verifyToken, checkAdmin, addProduct);
 
 // Read
 router.get('/', getProducts);
 router.get('/:id', getProductById);
 
 // Update
-router.put('/:id', verifyToken, updateProduct);
+router.put('/:id', verifyToken, checkAdmin, updateProduct);
 
 // Delete
-router.delete('/:id', verifyToken, deleteProduct);
+router.delete('/:id', verifyToken, checkAdmin, deleteProduct);
 
 module.exports = router;
