@@ -44,7 +44,7 @@ const Nav = () => {
           { user
             ? (
               <>
-                <li><NavLink to='/orders' className='nav-link'>My orders</NavLink></li>
+                <li><NavLink to='/orders' className='nav-link'>Orders</NavLink></li>
                 <li><NavLink to="/user" className='nav-link nav-link-grey'>User Profile</NavLink></li>
                 <li><button className='nav-link nav-link-grey' onClick={() => dispatch(logOut())}>Logout</button></li>
               </>

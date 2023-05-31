@@ -1,10 +1,20 @@
-const getOrderAsync = async (userId) => {
-    const res = await fetch('http://localhost:9999/api/orders/user/' + userId)
-    if(!res.ok) throw new Error('Something went wrong')
-    return res.json()
+// const getOrderAsync = async (userId) => {
+//     const res = await fetch('http://localhost:9999/api/orders/user/' + userId)
+//     if(!res.ok) throw new Error('Something went wrong')
+//     return res.json()
+// }
+
+const getAllOrdersAsync = async () => {
+  const res = await fetch('http://localhost:9999/api/orders/')
+  if(!res.ok) throw new Error('Something went wrong')
+  return res.json()
 }
 
-
+const getOrderByIdAsync = async () => {
+  const res = await fetch('http://localhost:9999/api/orders/' + id)
+  if(!res.ok) throw new Error('Something went wrong')
+  return res.json()
+}
 
 
 const createOrderAsync = async (orderData) => {
@@ -27,9 +37,10 @@ const createOrderAsync = async (orderData) => {
   };
 
 
-const  orderService = {
-getOrderAsync,
-createOrderAsync
+const orderService = {
+getAllOrdersAsync,
+createOrderAsync,
+getOrderByIdAsync
     
 }
 

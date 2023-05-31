@@ -13,6 +13,7 @@ import OrderList from './pages/OrderList'
 import AddProduct from './pages/AddProduct'
 import DeleteProduct from './pages/DeleteProduct'
 import Edit from './pages/Edit'
+import OrderDetails from './pages/OrderDetails'
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/delete-product/:id" element= { <DeleteProduct/>}/>
             <Route path="/contact" element= { <Contact/>}/>
             <Route path= "/orders" element ={<OrderList/>}/>
+            <Route path= "/orders/:id" element ={<OrderDetails/>}/>
             <Route path="/login" element= { <Login/>}/>
             <Route path="/registration" element= { <Registration/>}/>
             <Route path='/checkout' element={<Checkout />} />
