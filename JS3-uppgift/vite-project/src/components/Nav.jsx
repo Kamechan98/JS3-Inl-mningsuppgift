@@ -8,6 +8,7 @@ import { logOut } from '../store/features/auth/authSlice';
 
 const Nav = () => {
 
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   // Showing and hiding shopping cart
@@ -46,7 +47,7 @@ const Nav = () => {
               <>
                 <li><NavLink to='/orders' className='nav-link'>Orders</NavLink></li>
                 <li><NavLink to="/user" className='nav-link nav-link-grey'>User Profile</NavLink></li>
-                <li><button className='nav-link nav-link-grey' onClick={() => dispatch(logOut())}>Logout</button></li>
+                <li><button className='nav-link nav-link-grey' onClick={() => dispatch(logOut(), navigate('/login/') )}>Logout</button></li>
               </>
             )
             : <li><NavLink to='/login' className='nav-link nav-link-grey'>Login</NavLink></li>

@@ -1088,6 +1088,11 @@ margin-bottom: 15px;
     object-fit: cover;
   }
   
+  .order-card {
+    display: flex;
+    flex-direction: row;
+  }
+  
   .row-wrapper{
     display: inline-block;
     width: 160px;
@@ -1097,7 +1102,8 @@ margin-bottom: 15px;
     border: 1px solid grey;
     padding: 1rem;
     margin-top: 1rem;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
   }
 
   .ordernumber{

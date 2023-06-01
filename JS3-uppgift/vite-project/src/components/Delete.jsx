@@ -2,7 +2,6 @@ import React from 'react'
 import useFetch from '../components/useFetch'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState } from 'react'
-import ProductCard from './ProductCard'
 import { useSelector } from 'react-redux'
 
 const Delete = () => {

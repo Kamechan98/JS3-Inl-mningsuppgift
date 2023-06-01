@@ -16,7 +16,7 @@ export const validateProduct = ( formData, setErrors ) => {
   }
 
    // price
-   if(formData.price.trim() === '') {
+   if(formData.price === '') {
     err.price = 'You need to enter a price'
   } else if(formData.price.length < 1) {
     err.price = 'Your price is invalid'

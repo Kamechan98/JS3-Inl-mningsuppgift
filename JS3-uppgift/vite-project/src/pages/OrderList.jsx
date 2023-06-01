@@ -28,7 +28,7 @@ const OrderList = () => {
     }, [user])
 
     // console.log(orders[0])
-    console.log(orders.orderRow)
+    // console.log(orders.orderRow)
 
     return (
       <div className='allOrders'>
