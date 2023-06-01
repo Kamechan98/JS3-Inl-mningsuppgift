@@ -602,11 +602,6 @@ margin-top: 30px;
     top:2px;
   }
 
-
-
-
-
-
 /*----------Sale component ----------- */
 
 .SaleHomepage {
@@ -706,8 +701,8 @@ margin-top: 30px;
     font-size: 1em;
 }
 
-
 /*---------------Top of the week Homepage -----------*/
+
 .TopHomepage {
     background-color: #fff;
     padding: 4rem;
@@ -735,9 +730,6 @@ margin-top: 30px;
     border: 1px solid #000;
     border-radius: .4em;
 }
-
-
-
 
 
 /* Subscribe component */
@@ -1025,8 +1017,6 @@ margin-bottom: 15px;
     color: #fff;
 }
 
-
-
 /* -------Checkout------------- */
 
 .Checkout {
@@ -1110,6 +1100,27 @@ margin-bottom: 15px;
     margin-top: .5rem;
     margin-bottom: .3rem;
     display: block;
+    font-size: 1.1rem;
+  }
+
+  .p-status{
+    font-size: 1.1rem;
+  }
+  .order-card p {
+    font-size: 1.1rem;
+  }
+
+  .status {
+    margin-top: 1rem;
+    padding: 1em; 
+    margin-right: 2em; 
+    font-size: .9em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: #e0183a;
+    color: #DDDDDD;
   }
 
   .curOrders{

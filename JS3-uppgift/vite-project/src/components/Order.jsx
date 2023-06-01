@@ -42,7 +42,7 @@ const Order = () => {
         <button className='status' onClick={ ()=> updateOrderStatus('In Transit')}>In Transit</button>
         <button className='status'  onClick={ ()=> updateOrderStatus('Cancelled')}>Cancelled</button>
         </div>
-        <p>Status: {order.orderStatus}</p>
+        <p className='p-status'>Status: {order.orderStatus}</p>
         {order.orderRow.map((row) => (
        <OrderRow row={row}/>                 
         ))}
