@@ -34,7 +34,6 @@ const Order = () => {
     }
     
     return (
-    //   <Link to={`/orders/${order.id}` }>
         <div key={order._id} className='order-wrapper'>
         <p className='ordernumber'><b>Ordernumber:</b> {order._id}</p>
         <div className='update-status'>
@@ -48,7 +47,6 @@ const Order = () => {
        <OrderRow row={row}/>                 
         ))}
         </div>
-    //  </Link>
   )
 }
 export default Order

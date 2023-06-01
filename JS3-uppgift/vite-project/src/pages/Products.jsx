@@ -16,7 +16,7 @@ const Products = () => {
       <div className='add-wrap'>
       <button className='add-btn' onClick={ () => navigate('/add-product/')}>add</button>
       </div>
-      {/* Possible menu with filters, the tags we gave the products? */}
+      
       <ul className='ProductCards-container'>
         {isLoading && <p>Loading...</p>}
         {error && <h2>{ error }</h2>}

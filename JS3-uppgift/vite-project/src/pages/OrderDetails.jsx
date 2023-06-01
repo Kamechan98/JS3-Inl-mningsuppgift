@@ -14,8 +14,8 @@ const OrderDetails = () => {
         dispatch(getOrderById(id));
     }, []);
 
-    // const {user} = useSelector(state => state.auth)
-    // if(!user) return <Navigate to='/login'/>
+    const {user} = useSelector(state => state.auth)
+    if(!user) return <Navigate to='/login'/>
     
   return (
     <div>

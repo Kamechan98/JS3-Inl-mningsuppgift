@@ -21,37 +21,6 @@ exports.addOrder = async (req, res) => {
   res.status(201).json(order)
 }
 
-// Add new order rows to existing order
-
-// exports.addToExistingOrder = async (req, res) => {
-  
-//   const { product, quantity } = req.body
-//   if(!product || !quantity) res.status(400).json({ message: 'You need to enter product and quantity' })
-  
-//   const order = await Order.findById(req.params.id)
-//   if(!order) res.status(404).json({ message: 'Could not find order' })
-  
-//   // Adding entered product and quantity as a new object in orderRow array
-//   order.orderRow.push({ product, quantity })
-//   await order.save()
-
-//   res.status(201).json(order)
-
-// }
-
-// Get all orders
-
-
-
-// exports.getOrders = async (req, res) => {
-
-//   const orders = await Order.find()
-
-//   if(!orders) res.status(500).json({ message: 'Something went wrong when getting orders' })
-
-//   res.status(200).json(orders)
-// }
-
 exports.getOrders = async (req, res) => {
 
   const orders = await Order.find()

@@ -27,21 +27,9 @@ const OrderList = () => {
         }
     }, [user])
 
-    // console.log(orders[0])
-    // console.log(orders.orderRow)
-
     return (
       <div className='allOrders'>
         <div className='curOrders'>
-
-        {/* <h1>Current orders</h1> */}
-        {/* <div className="current-order">
-        { cart.length < 1 && (
-        //   <p>You have no items in your shopping cart</p>
-        ) }
-        { cart.map(item => <CartItem key={'user-cart' + item.product._id} item={item} />) }
-        <p className='price'>Total Price: ${totalAmount},00</p>
-        </div> */}
        
       
       <div className='prevOrders'>

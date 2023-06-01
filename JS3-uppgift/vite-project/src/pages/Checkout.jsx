@@ -15,14 +15,6 @@ const Checkout = () => {
   const { user } = useSelector(state => state.auth)
   if(!user) return <Navigate to='/login'/>
 
-  // const placeOrder = () => {
-  //   const order = cart.map(item => {
-  //     return { id: item.product._id, quantity: item.quantity }
-  //   })
-
-  //   dispatch(addOrder(order));
-  // }
-
   const placeOrder = () =>{
     
     
