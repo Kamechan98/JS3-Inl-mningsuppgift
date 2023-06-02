@@ -13,7 +13,14 @@ const Checkout = () => {
 
   const { cart, totalAmount } = useSelector(state => state.shoppingCart)
   const { user } = useSelector(state => state.auth)
-  if(!user) return <Navigate to='/login'/>
+
+  // const placeOrder = () => {
+  //   const order = cart.map(item => {
+  //     return { id: item.product._id, quantity: item.quantity }
+  //   })
+
+  //   dispatch(addOrder(order));
+  // }
 
   const placeOrder = () =>{
     
@@ -23,8 +30,7 @@ const Checkout = () => {
       orderRow: cart.map(item =>({
         product: item.product,
         quantity: item.quantity
-      })),
-      orderStatus: 'Pending'
+      }))
     }
 
 
@@ -42,7 +48,7 @@ const Checkout = () => {
       }
       <div className='purchase'>
         <h2>Total Amount: ${totalAmount}</h2>
-        {/* <button className="cart-btn">Complete Purchase</button> */}
+        <button className="cart-btn">Complete Purchase</button>
 
         <button className="cart-btn" onClick={placeOrder}>
           Complete Purchase

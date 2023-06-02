@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { getOrderById } from '../store/features/orders/orderSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate, useParams } from 'react-router-dom';
-import useFetch from '../components/useFetch';
 import Order from '../components/Order';
 
 const OrderDetails = () => {

@@ -3,14 +3,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllOrders } from '../store/features/orders/orderSlice';
 import CartItem from '../components/ShoppingCart/CartItem'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import useFetch from '../components/useFetch';
 
 
 const OrderList = () => {
 
+    const { data: orders } = useFetch('http://localhost:9999/api/orders/')
+
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const { products } = useSelector(state => state.products);
-    const { orders } = useSelector(state => state.orders);
+    // const { orders } = useSelector(state => state.orders);
     const { cart, totalAmount } = useSelector(state => state.shoppingCart)
     const { user } = useSelector(state => state.auth)
     if(!user) return <Navigate to='/login'/>
@@ -30,7 +33,6 @@ const OrderList = () => {
     return (
       <div className='allOrders'>
         <div className='curOrders'>
-       
       
       <div className='prevOrders'>
             <h1>All orders</h1>
@@ -43,9 +45,9 @@ const OrderList = () => {
                         
                         <div key={row._id} className='row-wrapper'>
                             
-                            <img src={row.product.imageURL} alt={row.product.name} className='orderRowImg'/>
-                            <p><b>Product:</b> {row.product.name}</p>
-                            <p><b>Quantity:</b> {row.quantity}</p>
+                            { row.product && <img src={row.product.imageURL} alt={row.product.name} className='orderRowImg'/>}
+                            { row.product && <p><b>Product:</b> {row.product.name}</p>}
+                            { row.product &&<p><b>Quantity:</b> {row.quantity}</p>}
                         </div>
                     ))}
                 </div>
@@ -60,5 +62,4 @@ const OrderList = () => {
 }
 
 export default OrderList
-
 

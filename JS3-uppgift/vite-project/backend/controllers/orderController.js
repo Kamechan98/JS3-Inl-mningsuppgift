@@ -8,7 +8,7 @@ const { verifyToken, checkAdmin } = require('../authentication/auth')
 router.post('/', addOrder)
 
 // router.post('/add/:id', addToExistingOrder)
-router.put('/:id', verifyToken, checkAdmin, updateStatus)
+router.put('/:id', updateStatus)
 // Read
 router.get('/', getOrders)
 // router.get('/', verifyToken, checkAdmin, getOrders)

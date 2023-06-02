@@ -13,8 +13,8 @@ const Order = () => {
 
     const {id} = useParams()
     const { data: order } = useFetch('http://localhost:9999/api/orders/' + id)
-    if(!order) return
-    console.log(order)
+    // if(!order) return
+    // console.log(order)
 
 
     const updateOrderStatus = async (status) => {
@@ -34,19 +34,19 @@ const Order = () => {
     }
     
     return (
-        <div key={order._id} className='order-wrapper'>
-        <p className='ordernumber'><b>Ordernumber:</b> {order._id}</p>
+      <div className='order-wrapper'>
+        <p className='ordernumber'><b>Ordernumber:</b> {order && order._id}</p>
         <div className='update-status'>
         <button className='status' onClick={ ()=> updateOrderStatus('Completed')}>Completed</button>
         <button className='status' onClick={ ()=> updateOrderStatus('Pending')}>Pending</button>
         <button className='status' onClick={ ()=> updateOrderStatus('In Transit')}>In Transit</button>
         <button className='status'  onClick={ ()=> updateOrderStatus('Cancelled')}>Cancelled</button>
         </div>
-        <p className='p-status'>Status: {order.orderStatus}</p>
-        {order.orderRow.map((row) => (
+        <p className='p-status'>Status: {order && order.orderStatus}</p>
+        {order && order.orderRow.map((row) => (
        <OrderRow row={row}/>                 
         ))}
-        </div>
+      </div>
   )
 }
 export default Order
