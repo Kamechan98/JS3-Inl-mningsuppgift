@@ -16,9 +16,6 @@ const OrderRow = ({row}) => {
             dispatch(getOrderById(id));
         }, []);
 
-        
-
-
   return (
     <div>
 

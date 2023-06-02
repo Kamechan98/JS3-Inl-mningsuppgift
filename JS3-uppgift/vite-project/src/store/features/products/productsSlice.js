@@ -41,6 +41,4 @@ export const productsSlice = createSlice({
   }
 })
 
-// export const { getAll } = productsSlice.actions
-
 export default productsSlice.reducer

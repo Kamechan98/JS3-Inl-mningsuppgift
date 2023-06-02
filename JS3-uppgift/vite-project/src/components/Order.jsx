@@ -13,12 +13,10 @@ const Order = () => {
 
     const {id} = useParams()
     const { data: order } = useFetch('http://localhost:9999/api/orders/' + id)
-    // if(!order) return
-    // console.log(order)
+    if(!order) return
 
 
     const updateOrderStatus = async (status) => {
-      // if(!validateProduct(formData, setErrors)) return
       const orderStatus = {orderStatus:status}
       const res = await fetch ('http://localhost:9999/api/orders/' + id, {
         method: 'PUT',

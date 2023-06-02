@@ -11,9 +11,7 @@ const OrderList = () => {
     const { data: orders } = useFetch('http://localhost:9999/api/orders/')
 
     const dispatch = useDispatch();
-    const navigate = useNavigate()
-    const { products } = useSelector(state => state.products);
-    // const { orders } = useSelector(state => state.orders);
+    const navigate = useNavigate();
     const { cart, totalAmount } = useSelector(state => state.shoppingCart)
     const { user } = useSelector(state => state.auth)
     if(!user) return <Navigate to='/login'/>
